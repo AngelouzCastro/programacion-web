@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow functions</title>
+</head>
+<body>
+    <h2>arrow functions</h2>
+    <script>
+        
+
+        const saludar = ()=>console.log("hola");
+        saludar();
+        
+        
+        const saludar2 = (nombre)=>console.log("hola",nombre);
+        saludar2("angel");
+
+        const sumar = function (a,b)
+        {
+            return a + b;
+        }
+
+        console.log(sumar(4,5))
+        
+        const sumar2 = (a,b) => a+b;
+        console.log(sumar2(3,7));
+
+        const numeros = [1,2,3,4,5];
+
+        numeros.forEach((el, index)=>console.log(`${el} esta en la posision ${index}`));
+
+        const perro = {
+            nombre:"max",
+            ladrar(){
+                console.log(this)
+            }
+        }
+
+        perro.ladrar();
+
+    </script>
+    
+    
+</body>
+</html>

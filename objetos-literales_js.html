@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objetos literales</title>
+</head>
+<body>
+    <script>
+        let nombre = "max";
+        let edad = 2;
+
+        const perro = {
+            nombre: nombre,
+            edad: edad,
+            ladrad : function (){
+                console.log("guau")
+            }
+        }
+
+        console.log(perro);
+        perro.ladrad();
+
+        const dog = {
+            nombre,
+            edad,
+            raza:"chihuahua",
+            ladrad(){
+                console.log("guau!!!1")
+            }
+        };
+
+        console.log(dog)
+        dog.ladrad();
+
+    </script>
+</body>
+</html>

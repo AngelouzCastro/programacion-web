@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> objetos javascript</title>
+</head>
+<body>
+    <h1>objetos de javascript</h1>
+    <script>
+        //objetos
+        const b = {
+
+        };
+
+        console.log(b);
+
+        const angel = {
+            nombre:"angel",
+            edad:22,
+            apellido:'martinez',
+            pasatiempos:["programar","cantar"],
+            soltero:true,
+            contacto: {
+            email:"am43591@gmail.com",
+            numero:"12231424",
+            facebool:"angelmtx"
+            },
+            saludar: function(){
+            console.log(`hola :)`)
+            },
+            desirnombre: function(){
+                console.log(`hola me llamo ${this.nombre} y 
+                mi facebook es ${this.contacto.facebool}`)
+            }
+
+        }
+
+        console.log(angel)
+        console.log(angel["nombre"])
+        angel.saludar()
+        angel.desirnombre()
+        console.log(angel.saludar)
+        console.log(angel.contacto.facebool)
+        console.log(angel.pasatiempos[1])
+
+        console.log(Object.keys(angel))
+        console.log(Object.values(angel))
+        console.log(angel.hasOwnProperty("nombre"))
+        
+    </script>
+</body>

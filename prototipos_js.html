@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //esto es como la programacion orientada a objetos en javascript
+        //funcion constructora
+        function Animal(nombre,genero)
+        {
+            //atributos
+            this.nombre = nombre;
+            this.genero = genero;
+            
+        }
+
+        //metodos agregados al prototipo de la funcion constructora
+        //esto ayuda mejorar el rendimiento en la memoria
+            Animal.prototype.sonar = function() 
+            {
+                console.log("sonido");
+            };
+
+            Animal.prototype.saludar = function ()
+            {
+                console.log(`hola me llamo ${this.nombre}`);
+            }
+
+            
+        //herencia prototipica
+        function Perro(nombre,genero,tamano) {
+            this.super = Animal;
+            this.super(nombre,genero);
+            this.tamano = tamano;
+        }
+
+        //perro esta heredadndo de animal
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro;
+
+        //sobrescritura del prototipo del padre en el hijo
+        Perro.prototype.sonar = function ()
+        {
+            console.log("soy un perro y mi sonido es un ladrido");
+        }
+        Perro.prototype.ladrar = function ()
+        {
+            console.log("guau guau!");
+        }
+
+
+        const perro = new Perro("pedro","macho","mediano");
+        const pato = new Animal("lucas","macho");
+
+        console.log(perro);
+        console.log(pato);
+
+        perro.sonar();
+        perro.saludar();
+
+        pato.sonar();
+        pato.saludar();
+        
+
+    </script>
+</body>
+</html>

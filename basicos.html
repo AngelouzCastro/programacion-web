@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> fundamentos de javascript</title>
+</head>
+<body>
+    <h1>fundamentos de javascript</h1>
+    <script>
+        var $hola = "Hola mundo"
+        let $hola_local = "Hola mundo local"
+        console.log($hola)
+
+        if(true)
+        {
+            var $a = 5
+            let $b = 6
+            
+        }
+
+        console.log($a+$a)
+        console.log(window)
+
+
+        //variable constante
+        constpo = 3.1415
+
+        //objeto en js
+        let objeto = {
+            nombre: "angel",
+            edad: 22
+        }
+
+        //array o arreglo
+        let colores = ["blanco","azul","amarillo"]
+
+        console.log(objeto)
+        console.log(colores)
+
+        objeto.correo = "angel@gmail,com"
+        colores.push("verde")
+
+
+        
+        console.log(objeto)
+        objeto.correo = "angel@gmail2,com"
+        console.log(colores)
+
+
+        //concatenacion
+        let saludo = "hola"
+        let apellido = "martinez"
+        saludo = saludo + " angel"
+        saludo += " josue"
+        saludo += `  ${apellido}`
+        console.log(saludo,"\ncastro")
+
+        let ul = `asda
+        asdafas
+        adasdas`
+        
+        console.log(ul)
+
+    </script>
+</body>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condiciones</title>
+</head>
+<body>
+    <h1>cindicion y operadores</h1>
+    <script>
+        // "===" es comparacion de tipo de valor y comparacion
+        console.log(1===23)
+        let edad = 10
+        let edad2 = (edad >= 18)?"eres mayor de edad":"eres menor de edad";
+        console.log(edad2)
+
+        //swit case
+        let key = "lunes";
+        switch(key)
+        {
+            case "lunes":
+                console.log("es lunes que bien");
+                
+                break;
+            default:
+                console.log("es",key);
+                break;
+        }
+        // ciclos
+        let cont = 0
+        while (cont < 10)
+        {
+            cont++
+            console.log("while",cont)
+            
+        }
+        let cont2 = 0
+        do{
+            cont2++
+            console.log("do while",cont2)
+            
+        }while(cont2 < 10)
+
+        let numeros = [10,20,30,40,50]
+        for (let i = 0; i < numeros.length; i++) {
+            console.log(numeros[i]);   
+        }
+
+        const ag = {
+            nombre:"angel",
+            edad:22,
+            sexo: "m"
+        }
+        //for in: es mas para objetos
+        for (const propiedad in ag) {
+                console.log(`ag:${propiedad},value:${ag[propiedad]}`);
+        }
+        //for of
+        for (const elemento of numeros) {
+            console.log(elemento)
+        }
+        let cadena = "hola mundo"
+        for (const iterator of cadena) {
+            console.log(iterator)
+        }
+
+        //try catch
+        let uno = 1
+        let dos = "dos"
+        
+        try {
+            //let si = p1
+        } catch (error) {
+            console.log("error:",error)
+        } finally {
+            console.log("vamos has algo:")
+        }
+    </script>
+</body>
+</html>

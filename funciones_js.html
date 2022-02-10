@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> fundamentos de javascript</title>
+</head>
+<body>
+    <h1>fundamentos de javascript</h1>
+    <script>
+        /*
+     //funciones
+     function funcionuno()
+     {
+         for (let i = 0; i < 4; i++){
+            console.log("\n",i)
+         }
+        
+     }
+
+     function imprimenombre(nombre,edad)
+     {
+         let n = 0;
+        while(true)
+        {
+            console.log(n,nombre)
+            n++
+            if (n == edad)
+            {
+                break
+            }
+        }
+        return n
+     }
+
+     funcionuno()
+     let edad = 4
+     let numero = imprimenombre("angel",edad)
+     console.log("el numero regresado es",numero)
+
+     //funcion anonima
+     const textini = funcionuno () 
+     {
+         console.log("esto no funciona")
+     }
+    */
+     // arreglos
+     const a = []
+     const b = [1,true,"hola",["a","b","c"]]
+
+     console.log(a)
+     console.log("b",b)
+     console.log(b[2])
+     console.log(b[3][1])
+     /* ya no se usa
+     const c = Array.of("x","Y","Z",9,8,7)
+     console.log(c)
+
+     const d = Array(100).fill(false)
+     d = new Array (true)
+     console.log(d)
+     */
+     b.push("lol")
+     console.log(b)
+
+     b[3].push("d")
+     console.log(b)
+     
+     b[3].pop()
+     console.log(b)
+
+     b.forEach(function(el,index){
+        console.log(`<li id="${index}">${el}</li>`);
+     });
+
+    </script>
+</body>
